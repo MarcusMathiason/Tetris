@@ -1,17 +1,12 @@
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.GridLayout;
-import java.awt.Image;
-import java.awt.image.BufferedImage;
 
-import javax.imageio.ImageIO;
 import javax.swing.BorderFactory;
-import javax.swing.Icon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
 public class Main {
-	private Screen screen;
 	private static final int WIDTH = 10;
 	private static final int HEIGHT = 20;
 	
