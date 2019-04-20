@@ -16,6 +16,8 @@ public class Main {
 	private static final int HEIGHT = 20;
 	private static BufferedImage img;
 	private static Tetromino mino;
+	private static JFrame frame;
+	private static GridLayout layout;
 	
 	
 	public static void init() {
@@ -25,14 +27,6 @@ public class Main {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-	}
-
-	public static void main(String[] args) {
-		init();
-		GridLayout layout = new GridLayout(HEIGHT, WIDTH);
-		JFrame frame = new JFrame("Tetris");
-		frame.setLayout(layout);
-		
 		
 		for(int i = 0; i < (layout.getRows()*layout.getColumns()); i++) {
 			mino = new Tetromino(img);
@@ -41,8 +35,18 @@ public class Main {
 			label.setBorder(BorderFactory.createLineBorder(Color.BLACK));
 			frame.add(label);
 		}
+	}
+
+	public static void main(String[] args) {
 		
+		layout = new GridLayout(HEIGHT, WIDTH);
+		
+		frame = new JFrame("Tetris");
 		frame.setLayout(layout);
+		
+		init();
+		
+		
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.pack();
 		frame.setVisible(true);
