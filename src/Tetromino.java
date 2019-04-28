@@ -16,20 +16,28 @@ public class Tetromino {
 	
 	public BufferedImage getSprite() {
 		switch(shape) {
+		//Light blue
 		case "I" : 
-			return img.getSubimage(0, 0, 8, 8);
+			return img.getSubimage(16*0, 0, 16, 16);
+		//Yellow
 		case "O" : 
-			return img.getSubimage(9, 0, 8, 8);
+			return img.getSubimage(16*1, 0, 16, 16);
+		//Purple
 		case "T" : 
-			return img.getSubimage(17, 0, 8, 8);
+			return img.getSubimage(16*2, 0, 16, 16);
+		//Dark blue
 		case "J" : 
-			return img.getSubimage(25, 0, 8, 8);
+			return img.getSubimage(16*3, 0, 16, 16);
+		//Orange
 		case "L" :
-			return img.getSubimage(33, 0, 8, 8);
+			return img.getSubimage(0, 16, 16, 16);
+		//Green
 		case "S" : 
-			return img.getSubimage(41, 0, 8, 8);
+			return img.getSubimage(16, 16, 16, 16);
+		//Red
 		case "Z" : 
-			return img.getSubimage(49, 0, 8, 8);
+			return img.getSubimage(16*2, 16, 16, 16);
+		//White
 		default	:
 			return null;
 		}
